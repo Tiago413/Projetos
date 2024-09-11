@@ -1,0 +1,41 @@
+#include<iostream>
+#include<locale.h>
+using namespace std;
+
+int main()
+{
+    int opc;    
+   cout<<"escolha a opção ";
+   cout<<"1 adição ";
+   cout<<"2 subtração ";
+   cout<<"3 multiplicação ";
+   cout<<"4 divisão ";
+   cout<<"5 média";
+   cin>>opc;
+   float n1,n2,r;
+   cout<<"informe o primeiro numero";
+   cin>>n1;
+   cout<<"informe o segundo numero";
+   cin>>n2;
+   switch (opc)
+   {
+   case 1:{r=n1+n2;
+          cout<<"o resultado é:"<<r;
+          break;}
+    case 2:{ r=n1-n2;
+            cout<<"o resultado é:"<<r;
+            break;}
+    case 3:{r=n1*n2;
+            cout<<"o resultado é:"<<r;
+            break;}
+    case 4:{r=n1/n2;
+            cout<<"o resultado é:"<<r;
+            break;}
+    case 5:{r=(n1+n2)/2;
+            cout<<"o resultado é:"<<r;
+            break;}
+    default : cout<<"opção invalida:";
+            break;
+   }
+   return 0;
+}
