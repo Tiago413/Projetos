@@ -1,0 +1,118 @@
+
+#include<iostream>
+#include<locale.h>
+#include<windows.h>
+
+using namespace std;
+
+int main()
+{
+   setlocale(LC_ALL,"portuguese");
+   //var totalizadoras
+   int cand1=0;
+   int cand2=0;
+   int cand3=0;
+   int cand4=0;
+   int vnulo=0;
+   int vbranco=0;
+   //var armazena o voto
+   int voto=1;
+    while(voto !=0)
+    {   
+        cout<<"***********************************************\n";
+        cout<<"*            Eleições municipais              *\n";
+        cout<<"*                                             *\n";
+        cout<<"*            1- João de Barro                 *\n";
+        cout<<"*            2- Zé Macalé                     *\n";
+        cout<<"*            3- Manoel do frete               *\n";
+        cout<<"*            4- Alfredo Antônio               *\n";
+        cout<<"*            5- Voto nulo                     *\n";
+        cout<<"*            6- Voto Branco                   *\n";
+        cout<<"*            0- Encerrar votação              *\n";
+        cout<<"*                                             *\n";
+        cout<<"***********************************************\n";
+        cin>>voto;
+        system("cls");
+       switch (voto)
+   {
+   case 1: 
+            {cand1++;
+            cout<<"Votação concluida \n;
+            sleep(3000);
+            system("cls");
+            break;}
+    case 2: 
+            {cand2++;
+            cout<<"Votação concluida\n";
+            sleep(3000);
+            system("cls");
+            break;}
+    case 3:
+            {cand3++;
+            cout<<"Votação concluida\n";
+            sleep(3000);
+            system("cls");
+            break;}
+    case 4
+            :{cand4++;
+            cout<<"Votação concluida\n";
+            sleep(3000);
+            system("cls");
+            break;}
+    case 5:
+            {vnulo++;
+            cout<<"Votação concluida\n";
+            sleep(3000);
+            system("cls");
+            break;}
+    case 6:
+            {vbranco++;
+            cout<<"Votação concluida\n"
+            sleep(3000);
+            system("cls");
+            break;}
+    default:    
+            cout<<"Voto Inválido:\n";
+            break;
+   }//fim so switch
+   return 0;
+}// fim whil3
+        cout<<" a quantidade de votos do candidato é"<<cand1<<"\n";
+        cout<<" a quantidade de votos do candidato é"<<cand2<<"\n";
+        cout<<" a quantidade de votos do candidato é"<<cand3<<"\n";
+        cout<<" a quantidade de votos do candidato é"<<cand4<<"\n";
+        cout<<" a quantidade de votos nulos é"<<vnulo<<"\n";
+        cout<<" a quantidade de votos em branco é"<<vbranco<<"\n";
+}
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+        
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+    
+             
+
