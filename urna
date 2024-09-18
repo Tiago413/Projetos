@@ -1,0 +1,89 @@
+#include <iostream>
+#include <locale.h>
+#include <cstdlib> // Para system("clear") ou system("cls")
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "portuguese");
+
+    // Variáveis totalizadoras de voto
+    int cand1 = 0;
+    int cand2 = 0;
+    int cand3 = 0;
+    int cand4 = 0;
+    int vnulo = 0;
+    int vbranco = 0;
+
+    // Variável que armazena o voto
+    int voto = 1;
+    while (voto != 0) {
+        cout << "**********************************\n";
+        cout << "*	Eleições Municipais			*\n";
+        cout << "*								*\n";
+        cout << "*	1 - João de Barro			*\n";
+        cout << "*	2 - Zé Macalé				*\n";
+        cout << "*	3 - Manoel do Frete			*\n";
+        cout << "*	4 - Alfredo Antonio			*\n";
+        cout << "*	5 - Voto Nulo				*\n";
+        cout << "*	6 - Voto Branco		 		*\n";
+        cout << "*	0 - Encerrar a Votação		*\n";
+        cout << "*								*\n";
+        cout << "**********************************\n";
+        cin >> voto;
+        system("cls"); // Use "clear" se estiver em Linux ou macOS
+
+        switch (voto) {
+            case 1:
+                cand1++;
+                cout << "Voto computado com sucesso\n";
+                break;
+            case 2:
+                cand2++;
+                cout << "Voto computado com sucesso\n";
+                break;
+            case 3:
+                cand3++;
+                cout << "Voto computado com sucesso\n";
+                break;
+            case 4:
+                cand4++;
+                cout << "Voto computado com sucesso\n";
+                break;
+            case 5:
+                vnulo++;
+                cout << "Voto Nulo, computado com sucesso\n";
+                break;
+            case 6:
+                vbranco++;
+                cout << "Voto Branco, computado com sucesso\n";
+                break;
+            case 0:
+                break; // Finaliza a votação
+            default:
+                cout << "Voto inválido!!\n";
+                break;
+        }
+
+        cout << "Pressione Enter para continuar...";
+        cin.ignore(); // Ignora qualquer entrada anterior
+        cin.get(); // Espera pela entrada do usuário
+        system("cls"); // Limpa a tela
+    } // fim do while
+
+    // Cálculo de porcentagens
+    int totalVotos = cand1 + cand2 + cand3 + cand4 + vnulo + vbranco;
+    float percentualNulo = (totalVotos > 0) ? (vnulo * 100.0 / totalVotos) : 0;
+    float percentualBranco = (totalVotos > 0) ? (vbranco * 100.0 / totalVotos) : 0;
+
+    // Exibindo resultados
+    cout << "A quantidade de votos do candidato João de Barro é: " << cand1 << "\n";
+    cout << "A quantidade de votos do candidato Zé Macalé é: " << cand2 << "\n";
+    cout << "A quantidade de votos do candidato Manoel do Frete é: " << cand3 << "\n";
+    cout << "A quantidade de votos do candidato Alfredo Antonio é: " << cand4 << "\n";
+    cout << "A quantidade de votos Nulo é: " << vnulo << "\n";
+    cout << "A quantidade de votos Branco é: " << vbranco << "\n";
+    cout << "Porcentagem de votos nulos: " << percentualNulo << "%\n";
+    cout << "Porcentagem de votos brancos: " << percentualBranco << "%\n";
+
+    return 0;
+}
