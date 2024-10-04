@@ -1,0 +1,98 @@
+ #include <iostream>
+using namespace std;
+
+int main() {
+    int votosJoao = 0, votosMaria = 0, votosCarlos = 0, votosBrancoPrefeito = 0, votosNuloPrefeito = 0;
+    int votosAna = 0, votosPedro = 0, votosBeatriz = 0, votosBrancoVereador = 0, votosNuloVereador = 0;
+    int opcao;
+
+    do {
+        cout << "\nMenu Principal\n";
+        cout << "1. Iniciar Votação\n";
+        cout << "2. Exibir Resultados\n";
+        cout << "3. Encerrar Programa\n";
+        cout << "Escolha uma opção: ";
+        cin >> opcao;
+
+        if (opcao == 1) {
+            int voto;
+
+
+            cout << "\nVote para Prefeito:\n";
+            cout << "10 - João Silva\n";
+            cout << "20 - Maria Oliveira\n";
+            cout << "30 - Carlos Pereira\n";
+            cout << "Digite o número do seu candidato (0 para branco): ";
+            cin >> voto;
+
+            if (voto == 10)
+                votosJoao++;
+            else if (voto == 20)
+                votosMaria++;
+            else if (voto == 30)
+                votosCarlos++;
+            else if (voto == 0)
+                votosBrancoPrefeito++;
+            else
+                votosNuloPrefeito++;
+
+
+            cout << "\nVote para Vereador:\n";
+            cout << "101 - Ana Santos\n";
+            cout << "102 - Pedro Lima\n";
+            cout << "103 - Beatriz Costa\n";
+            cout << "Digite o número do seu candidato (0 para branco): ";
+            cin >> voto;
+
+            if (voto == 101)
+                votosAna++;
+            else if (voto == 102)
+                votosPedro++;
+            else if (voto == 103)
+                votosBeatriz++;
+            else if (voto == 0)
+                votosBrancoVereador++;
+            else
+                votosNuloVereador++;
+
+            cout << "\nVotação concluída!\n";
+        }
+
+        else if (opcao == 2) {
+
+            int totalValidosPrefeito = votosJoao + votosMaria + votosCarlos;
+            int totalValidosVereador = votosAna + votosPedro + votosBeatriz;
+
+
+            int totalVotosPrefeito = totalValidosPrefeito + votosBrancoPrefeito + votosNuloPrefeito;
+            int totalVotosVereador = totalValidosVereador + votosBrancoVereador + votosNuloVereador;
+
+
+            cout << "\nResultados para Prefeito:\n";
+            cout << "João Silva: " << votosJoao << " votos (" << (votosJoao * 100.0 / totalValidosPrefeito) << "% dos votos válidos)\n";
+            cout << "Maria Oliveira: " << votosMaria << " votos (" << (votosMaria * 100.0 / totalValidosPrefeito) << "% dos votos válidos)\n";
+            cout << "Carlos Pereira: " << votosCarlos << " votos (" << (votosCarlos * 100.0 / totalValidosPrefeito) << "% dos votos válidos)\n";
+            cout << "Branco: " << votosBrancoPrefeito << " votos\n";
+            cout << "Nulo: " << votosNuloPrefeito << " votos\n";
+
+
+            cout << "\nResultados para Vereador:\n";
+            cout << "Ana Santos: " << votosAna << " votos (" << (votosAna * 100.0 / totalValidosVereador) << "% dos válidos)\n";
+            cout << "Pedro Lima: " << votosPedro << " votos (" << (votosPedro * 100.0 / totalValidosVereador) << "% dos válidos)\n";
+            cout << "Beatriz Costa: " << votosBeatriz << " votos (" << (votosBeatriz * 100.0 / totalValidosVereador) << "% dos válidos)\n";
+            cout << "Branco: " << votosBrancoVereador << " votos\n";
+            cout << "Nulo: " << votosNuloVereador << " votos\n";
+        }
+
+        else if (opcao == 3) {
+            cout << "Encerrando programa...\n";
+        }
+
+        else {
+            cout << "Opção inválida. Tente novamente.\n";
+        }
+
+    } while (opcao != 3);
+
+    return 0;
+}
