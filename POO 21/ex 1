@@ -1,0 +1,31 @@
+using System;
+
+class Carro
+{
+    public string Marca;
+    public string Modelo;
+    public int Ano;
+
+    // Construtor
+    public Carro(string marca, string modelo , int ano )
+    {
+        Marca = marca;
+        Modelo = modelo ;
+        Ano = ano ;
+        
+    }
+
+    public void ExibirInformações()
+    {
+        Console.WriteLine($"Este veiculo é da marca {Marca} modelo {Modelo} ano {Ano}.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Carro car1 = new Carro ("Ford", "EcoSport" , 2015);
+        car1.ExibirInformações();
+    }
+}
